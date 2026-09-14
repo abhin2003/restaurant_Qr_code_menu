@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-primary: var(--primary);
+  --color-theme-secondary: var(--secondary);
+  --color-theme-bg: var(--background);
+  --color-theme-card: var(--card-bg);
+  --color-theme-text: var(--text);
+  --color-theme-text-muted: var(--text-muted);
+  --color-theme-accent: var(--accent);
+}
+
+body {
+  background-color: var(--background, #f5f5f5);
+  color: var(--text, #171717);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hide scrollbar for Category Nav */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
