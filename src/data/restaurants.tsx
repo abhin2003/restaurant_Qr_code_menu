@@ -214,6 +214,7 @@ export const restaurants: Restaurant[] = [
       accent: '#dc2626', // Red-600
     },
     hero: {
+      image: '/images/burger_inn_bg.jpg',
       title: "BITE INTO HAPPINESS.",
       subtitle: "BIG BURGERS, BIG FLAVOUR. Quality ingredients combined.",
     },
