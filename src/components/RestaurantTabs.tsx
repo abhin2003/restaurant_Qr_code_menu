@@ -37,7 +37,13 @@ export default function RestaurantTabs() {
             )}
             
             <span className="relative z-20 flex items-center gap-2">
-              <span className="text-lg">{rest.logo}</span>
+              <span className="h-5 flex items-center justify-center overflow-visible">
+                {typeof rest.logo === 'string' ? (
+                  <img src={rest.logo} alt="" className="h-full w-auto object-contain" />
+                ) : (
+                  <div className="transform scale-75 origin-left">{rest.logo}</div>
+                )}
+              </span>
               <span>{rest.name}</span>
               {isActive && (
                  <motion.span 
