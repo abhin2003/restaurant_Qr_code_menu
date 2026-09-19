@@ -6,7 +6,8 @@ const cardBackgrounds: Record<string, { url: string, position: string }> = {
   'banazo': { url: '/images/banazo_avil.png', position: 'center top' },
   'grillo': { url: '/images/grillo_alpham.png', position: 'center center' },
   'burger-inn': { url: '/images/burger_inn_bg.jpg', position: 'center center' },
-  'bombay-cafe': { url: '/images/bombay_cafe_hero.jpg', position: 'center center' }
+  'bombay-cafe': { url: '/images/bombay_cafe_hero.jpg', position: 'center center' },
+  'wokyo': { url: '/images/wokyo_ho_fun.jpg', position: 'center center' }
 };
 
 export default function Home() {

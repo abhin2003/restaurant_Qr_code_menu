@@ -6,6 +6,7 @@ import BanazoMenu from '../../../components/BanazoMenu';
 import GrilloMenu from '../../../components/GrilloMenu';
 import BurgerInnMenu from '../../../components/BurgerInnMenu';
 import BombayCafeMenu from '../../../components/BombayCafeMenu';
+import WokyoMenu from '../../../components/WokyoMenu';
 import { Search, ShoppingBag } from 'lucide-react';
 
 export default async function RestaurantMenuPage({ params }: { params: Promise<{ restaurantSlug: string }> }) {
@@ -30,6 +31,10 @@ export default async function RestaurantMenuPage({ params }: { params: Promise<{
 
   if (restaurant.slug === 'bombay-cafe') {
     return <BombayCafeMenu restaurant={restaurant} />;
+  }
+
+  if (restaurant.slug === 'wokyo') {
+    return <WokyoMenu restaurant={restaurant} />;
   }
 
   return (

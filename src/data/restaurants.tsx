@@ -514,5 +514,55 @@ export const restaurants: Restaurant[] = [
         isVeg: true,
       }
     ]
+  },
+  {
+    name: 'Wokyo',
+    slug: 'wokyo',
+    description: 'Noodle Bar',
+    logo: '/images/wokyo_logo.jpg',
+    theme: {
+      primary: '#d97736',
+      secondary: '#c86625', 
+      background: '#d97736',
+      cardBg: '#ffffff',
+      text: '#171717',
+      textMuted: '#525252',
+      accent: '#d97736',
+    },
+    hero: {
+      image: '',
+      title: "SUPPER CLUB",
+      subtitle: "Al Maktoum, Mangolya Art - Shinjuku Street Sign",
+    },
+    categories: [
+      { id: 'w1', name: 'STRAIGHT FROM THE WOK' },
+      { id: 'w2', name: 'GYOZA CRAFT' },
+      { id: 'w3', name: 'RAMEN SANCTUARY' },
+      { id: 'w4', name: 'SWEET TOOTH & FINISH' },
+      { id: 'w5', name: 'HOUSE SIPS & SODA' }
+    ],
+    items: [
+      {
+        id: 'w-i1', name: 'SIGNATURE HO FUN', description: 'Flash-seared flat wide rice ribbons, sweet roasted greens, charred scallion oil.', price: 580, categoryId: 'w1', isVeg: false, image: '/images/wokyo_ho_fun.jpg'
+      },
+      {
+        id: 'w-i2', name: 'STIR FRIED BROCCOLI', description: 'Flash blistered with roasted Sichuan pepper, garlic crunch, finished in reduced savory chicken broth or house vegan glaze.', price: 390, categoryId: 'w1', isVeg: true
+      },
+      {
+        id: 'w-g1', name: 'CRISPY SKIRT GYOZA (6 PCS)', description: 'Pan-seared with thin starch lace veil until shatter-crispy. Served with chili sesame vinaigrette.', price: 420, categoryId: 'w2', isVeg: false, image: '/images/wokyo_gyoza.jpg'
+      },
+      {
+        id: 'w-r1', name: 'MASTER SHOYU RAMEN', description: 'Slow-extracted rich bone marrow broth infused with 24-month aged artisan Shoyu blend, cloudy tare, topped with rolled pork belly chashu, jammy ajitsuke tamago, roasted nori, and house rayu.', price: 580, categoryId: 'w3', isVeg: false, image: '/images/wokyo_ramen.jpg'
+      },
+      {
+        id: 'w-s1', name: 'CINNAMON DOUGHNUTS', description: 'Warm airy Japanese yeast doughnut puffs, rolled in Ceylon cinnamon sugar, served with warm macerated strawberry and yuzu compote.', price: 340, categoryId: 'w4', isVeg: true, image: '/images/wokyo_doughnuts.jpg'
+      },
+      {
+        id: 'w-d1', name: 'TOKYO YUZU LEMONADE', description: 'Pressed Kochi yuzu juice, sparkling mountain water, sea salt rim.', price: 220, categoryId: 'w5', isVeg: true
+      },
+      {
+        id: 'w-d2', name: 'ROASTED MUGICHA HIGHBALL (ZERO-PROOF)', description: 'Cold brewed roasted barley, dark brown sugar splash, fever-tree soda.', price: 220, categoryId: 'w5', isVeg: true
+      }
+    ]
   }
 ];
