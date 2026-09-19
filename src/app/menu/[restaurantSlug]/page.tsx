@@ -3,8 +3,9 @@ import { restaurants } from '../../../data/restaurants';
 import CategoryNav from '../../../components/CategoryNav';
 import MenuItemCard from '../../../components/MenuItemCard';
 import BanazoMenu from '../../../components/BanazoMenu';
-import GrillrxMenu from '../../../components/GrillrxMenu';
+import GrilloMenu from '../../../components/GrilloMenu';
 import BurgerInnMenu from '../../../components/BurgerInnMenu';
+import BombayCafeMenu from '../../../components/BombayCafeMenu';
 import { Search, ShoppingBag } from 'lucide-react';
 
 export default async function RestaurantMenuPage({ params }: { params: Promise<{ restaurantSlug: string }> }) {
@@ -19,12 +20,16 @@ export default async function RestaurantMenuPage({ params }: { params: Promise<{
     return <BanazoMenu restaurant={restaurant} />;
   }
 
-  if (restaurant.slug === 'grillax') {
-    return <GrillrxMenu restaurant={restaurant} />;
+  if (restaurant.slug === 'grillo') {
+    return <GrilloMenu restaurant={restaurant} />;
   }
 
   if (restaurant.slug === 'burger-inn') {
     return <BurgerInnMenu restaurant={restaurant} />;
+  }
+
+  if (restaurant.slug === 'bombay-cafe') {
+    return <BombayCafeMenu restaurant={restaurant} />;
   }
 
   return (

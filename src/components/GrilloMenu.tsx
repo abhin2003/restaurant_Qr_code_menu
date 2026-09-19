@@ -3,7 +3,7 @@
 import { Restaurant, MenuItem, MenuCategory } from '../types';
 import { Plus, Flame, Star, Coffee } from 'lucide-react';
 
-export default function GrillrxMenu({ restaurant }: { restaurant: Restaurant }) {
+export default function GrilloMenu({ restaurant }: { restaurant: Restaurant }) {
   const getItems = (catId: string) => restaurant.items.filter(i => i.categoryId === catId);
 
   const grandPlatters = getItems('g1');
@@ -17,8 +17,12 @@ export default function GrillrxMenu({ restaurant }: { restaurant: Restaurant }) 
       
       {/* Top Header */}
       <header className="px-4 py-4 flex justify-between items-center sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md">
-        <div className="h-8">
-          <img src="/images/grillax_logo.png" alt="GrillRX Logo" className="h-full w-auto object-contain" />
+        <div className="h-24 w-auto flex-shrink-0">
+          {typeof restaurant.logo === 'string' ? (
+            <img src={restaurant.logo} alt={`${restaurant.name} Logo`} className="h-full w-auto object-contain" />
+          ) : (
+            <div className="h-full">{restaurant.logo}</div>
+          )}
         </div>
 
       </header>
@@ -40,7 +44,7 @@ export default function GrillrxMenu({ restaurant }: { restaurant: Restaurant }) 
       <div className="px-4 text-center mt-6 mb-8 flex flex-col items-center">
 
         <h1 className="text-3xl font-black mb-2 tracking-wide uppercase text-white/90" style={{ letterSpacing: '0.05em' }}>
-          FIRE. FLAVOUR. <span className="text-[#f97316]">GRILLRX.</span>
+          FIRE. FLAVOUR. <span className="text-[#f97316]">GRILLO.</span>
         </h1>
         <p className="text-gray-400 font-medium text-[11px] leading-relaxed max-w-[280px]">
           Experience the true taste of charcoal grills. Served alongside the best authentic arabian food...
@@ -261,7 +265,7 @@ export default function GrillrxMenu({ restaurant }: { restaurant: Restaurant }) 
       {/* Footer Branding */}
       <div className="mt-12 px-4 pb-12 flex flex-col items-center justify-center opacity-40">
         <div className="text-[#f97316] font-bold text-2xl flex items-center gap-2 mb-2">
-           GRILLRX
+           GRILLO
         </div>
         <p className="text-center text-[9px] max-w-[200px] mb-4">
           Experience the finest charcoal grills in town. Our meat is sourced locally and grilled to perfection.

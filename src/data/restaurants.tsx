@@ -3,88 +3,144 @@ import { Restaurant } from '../types';
 
 export const restaurants: Restaurant[] = [
   {
-    name: 'Banazo',
-    slug: 'banazo',
-    description: 'Avil Milks, Shakes & Juices',
-    logo: '/images/banazo_logo.png',
+    name: 'Bombay Cafe',
+    slug: 'bombay-cafe',
+    description: 'Chai, Shakes & Snacks',
+    logo: '/images/bombay_cafe_logo.jpg',
     theme: {
-      primary: '#166534', // Dark Green
-      secondary: '#fef08a', // Yellow 
-      background: '#fde047', // Bright Yellow
-      cardBg: '#ffffff',
-      text: '#14532d', // Dark Green
-      textMuted: '#15803d', // Medium Green
-      accent: '#16a34a', // Accent Green
+      primary: '#dc2626', // Red-600
+      secondary: '#ef4444', // Red-500
+      background: '#ffffff', // White
+      cardBg: '#fafafa', // Neutral-50
+      text: '#171717', // Neutral-900
+      textMuted: '#525252', // Neutral-500
+      accent: '#dc2626', // Red-600
     },
     hero: {
-      image: 'https://images.unsplash.com/photo-1553177595-4de2bb0842b9?q=80&w=600&auto=format&fit=crop', // Bananas/Smoothie placeholder
-      title: "WHAT'S CRACKIN'",
-      subtitle: "Taste True Perfect Avil Milks, Shakes And Drinks From Banazo, Try To Believe Our Taste...",
+      image: '/images/bombay_cafe_hero.jpg',
+      title: "AUTHENTIC TASTE",
+      subtitle: "Cafe's Fav Shakes & Juices, Our Special Chai, and Snacks.",
     },
     categories: [
-      { id: 'c1', name: 'Fruit Salad' },
-      { id: 'c2', name: 'Fruit Salad (No Ice Cream)' },
-      { id: 'c3', name: 'Shakes' },
-      { id: 'c4', name: 'Fresh Juices' },
+      { id: 'bc1', name: "Cafe's Fav Shakes & Juices" },
+      { id: 'bc3', name: 'Juices' },
+      { id: 'bc4', name: 'Chai & Snacks' },
+      { id: 'bc2', name: 'Our Special Chai' },
+      { id: 'bc5', name: 'Chaat & Snacks' },
+      { id: 'bc6', name: 'South Indian' },
+      { id: 'bc7', name: 'Meals/Thali' },
+      { id: 'bc8', name: 'Fresh Bakery' },
+      { id: 'bc9', name: 'Ice Cream/Desserts' },
     ],
     items: [
+      // Cafe's Fav Shakes & Juices
       {
-        id: 'b1',
-        name: 'Vanilla Fruit Salad',
-        description: 'Colorful mixed fruit salad topped with vanilla ice cream.',
-        price: 100,
-        categoryId: 'c1',
-        isVeg: true,
-        isBestseller: true,
+        id: 'bc-i1', name: 'Avocado Shake', description: 'Creamy avocado shake blended to perfection.',
+        price: 150, categoryId: 'bc1', isVeg: true, isBestseller: true, image: '/images/bombay_cafe_shake.jpg',
       },
       {
-        id: 'b2',
-        name: 'Milkavo Special Fruits Mix',
-        description: 'Our special mixed fruit salad loaded with flavors.',
-        price: 130,
-        categoryId: 'c1',
-        isVeg: true,
+        id: 'bc-i1a', name: 'Mango Shake', description: 'Fresh seasonal mangoes blended with thick milk.',
+        price: 120, categoryId: 'bc1', isVeg: true, image: '/images/bombay_cafe_mango_shake.jpg',
+      },
+      
+      // Juices
+      {
+        id: 'bc-i2', name: 'Fresh Mixed Juice', description: 'Refreshing glass of mixed fruit juice.',
+        price: 90, categoryId: 'bc3', isVeg: true, image: '/images/bombay_cafe_juice.jpg',
       },
       {
-        id: 'b3',
-        name: 'Fresh Cut Fruits',
-        description: 'Freshly cut seasonal fruits served without ice cream.',
-        price: 120,
-        categoryId: 'c2',
-        isVeg: true,
+        id: 'bc-i2a', name: 'Orange Juice', description: 'Freshly squeezed sweet oranges.',
+        price: 80, categoryId: 'bc3', isVeg: true, image: '/images/bombay_cafe_orange_juice.jpg',
+      },
+
+      // Chai & Snacks
+      {
+        id: 'bc-i5', name: 'Samosa & Pakora Platter', description: 'Crispy samosas and pakoras served with mint and tamarind chutney.',
+        price: 120, categoryId: 'bc4', isVeg: true, image: '/images/bombay_cafe_snacks.jpg',
       },
       {
-        id: 'b4',
-        name: 'Chocolate Shake',
-        description: 'Thick and rich chocolate shake.',
-        price: 80,
-        categoryId: 'c3',
-        isVeg: true,
-        isBestseller: true,
+        id: 'bc-i6', name: 'Vada Pav', description: 'Classic Mumbai street food snack.',
+        price: 60, categoryId: 'bc4', isVeg: true,
       },
       {
-        id: 'b5',
-        name: 'Avocado Shake',
-        description: 'Creamy and healthy avocado shake.',
-        price: 80,
-        categoryId: 'c3',
-        isVeg: true,
+        id: 'bc-i6a', name: 'Bun Maska', description: 'Soft bun slathered with rich butter.',
+        price: 40, categoryId: 'bc4', isVeg: true,
+      },
+
+      // Our Special Chai
+      {
+        id: 'bc-i3', name: 'Masala Chai', description: 'Traditional Indian chai brewed with aromatic spices.',
+        price: 40, categoryId: 'bc2', isVeg: true, isBestseller: true, image: '/images/bombay_cafe_masala_chai.jpg',
       },
       {
-        id: 'b6',
-        name: 'Fresh Lime',
-        description: 'Refreshing fresh lime juice with ice.',
-        price: 20,
-        categoryId: 'c4',
-        isVeg: true,
+        id: 'bc-i4', name: 'Elayichi Chai', description: 'Aromatic cardamom tea served hot.',
+        price: 35, categoryId: 'bc2', isVeg: true, image: '/images/bombay_cafe_elayichi_chai.jpg',
+      },
+
+      // Chaat & Snacks
+      {
+        id: 'bc-c1', name: 'Pani Puri', description: 'Crispy puris stuffed with spicy water and potato.',
+        price: 60, categoryId: 'bc5', isVeg: true,
+      },
+      {
+        id: 'bc-c2', name: 'Bhel Puri', description: 'Puffed rice mixed with chutneys and veggies.',
+        price: 70, categoryId: 'bc5', isVeg: true,
+      },
+
+      // South Indian
+      {
+        id: 'bc-s1', name: 'Masala Dosa', description: 'Crispy crepe filled with spiced potato curry.',
+        price: 90, categoryId: 'bc6', isVeg: true,
+      },
+      {
+        id: 'bc-s2', name: 'Idli Sambar', description: 'Steamed rice cakes served with lentil soup.',
+        price: 70, categoryId: 'bc6', isVeg: true,
+      },
+
+      // Meals/Thali
+      {
+        id: 'bc-m1', name: 'Veg Meals (Thali)', description: 'Complete traditional vegetarian meal with rice, dal, curries, and sweet.',
+        price: 180, categoryId: 'bc7', isVeg: true, image: '/images/bombay_cafe_thali.jpg',
+      },
+      {
+        id: 'bc-m2', name: 'Chicken Thali', description: 'Traditional thali featuring our special chicken curry.',
+        price: 240, categoryId: 'bc7', isVeg: false,
+      },
+
+      // Fresh Bakery
+      {
+        id: 'bc-b1', name: 'Veg Puff', description: 'Flaky pastry filled with mixed vegetables.',
+        price: 30, categoryId: 'bc8', isVeg: true,
+      },
+      {
+        id: 'bc-b2', name: 'Chicken Puff', description: 'Flaky pastry filled with spiced minced chicken.',
+        price: 45, categoryId: 'bc8', isVeg: false,
+      },
+      {
+        id: 'bc-b3', name: 'Chocolate Cake (Slice)', description: 'Rich chocolate sponge cake.',
+        price: 80, categoryId: 'bc8', isVeg: true,
+      },
+      {
+        id: 'bc-b4', name: 'Black Forest', description: 'Classic black forest pastry with cherry.',
+        price: 90, categoryId: 'bc8', isVeg: true,
+      },
+
+      // Ice Cream/Desserts
+      {
+        id: 'bc-d1', name: 'Vanilla Ice Cream', description: 'Two scoops of classic vanilla.',
+        price: 70, categoryId: 'bc9', isVeg: true,
+      },
+      {
+        id: 'bc-d2', name: 'Royal Falooda', description: 'Rich falooda with dry fruits and ice cream.',
+        price: 150, categoryId: 'bc9', isVeg: true, isBestseller: true,
       }
     ]
   },
   {
-    name: 'The Grillax',
-    slug: 'grillax',
+    name: 'Grillo',
+    slug: 'grillo',
     description: 'Get it grilled',
-    logo: '/images/grillax_logo.png',
+    logo: '/images/grillo_logo_real.png',
     theme: {
       primary: '#f97316', // Bright Orange
       secondary: '#ea580c', // Darker Orange
@@ -95,8 +151,8 @@ export const restaurants: Restaurant[] = [
       accent: '#f97316', // Orange
     },
     hero: {
-      image: '/images/grillax_alpham.png', // Grill placeholder
-      title: "FIRE. FLAVOUR. GRILLRX.",
+      image: '/images/grillo_alpham.png', // Grill placeholder
+      title: "FIRE. FLAVOUR. GRILLO.",
       subtitle: "Experience the true taste of charcoal grills.",
     },
     categories: [
@@ -112,7 +168,7 @@ export const restaurants: Restaurant[] = [
         name: '4PAX GRAND PLATTER',
         description: 'Includes Cornstick, Vealchops, Peri Peri Chunks, Shishtawood, Sheekh Beef, Peri Peri Chicken, Hummus, Breads, Rice, Dips and more.',
         price: 1199,
-        image: '/images/grillax_alpham.png',
+        image: '/images/grillo_alpham.png',
         categoryId: 'g1',
         isVeg: false,
         isBestseller: true,
@@ -365,6 +421,84 @@ export const restaurants: Restaurant[] = [
         description: 'Thick belgian chocolate shake.',
         price: 1200,
         categoryId: 'bi4',
+        isVeg: true,
+      }
+    ]
+  },
+  {
+    name: 'Banazo',
+    slug: 'banazo',
+    description: 'Avil Milks, Shakes & Juices',
+    logo: '/images/banazo_logo.png',
+    theme: {
+      primary: '#166534', // Dark Green
+      secondary: '#fef08a', // Yellow 
+      background: '#fde047', // Bright Yellow
+      cardBg: '#ffffff',
+      text: '#14532d', // Dark Green
+      textMuted: '#15803d', // Medium Green
+      accent: '#16a34a', // Accent Green
+    },
+    hero: {
+      image: 'https://images.unsplash.com/photo-1553177595-4de2bb0842b9?q=80&w=600&auto=format&fit=crop', // Bananas/Smoothie placeholder
+      title: "WHAT'S CRACKIN'",
+      subtitle: "Taste True Perfect Avil Milks, Shakes And Drinks From Banazo, Try To Believe Our Taste...",
+    },
+    categories: [
+      { id: 'c1', name: 'Fruit Salad' },
+      { id: 'c2', name: 'Fruit Salad (No Ice Cream)' },
+      { id: 'c3', name: 'Shakes' },
+      { id: 'c4', name: 'Fresh Juices' },
+    ],
+    items: [
+      {
+        id: 'b1',
+        name: 'Vanilla Fruit Salad',
+        description: 'Colorful mixed fruit salad topped with vanilla ice cream.',
+        price: 100,
+        categoryId: 'c1',
+        isVeg: true,
+        isBestseller: true,
+      },
+      {
+        id: 'b2',
+        name: 'Milkavo Special Fruits Mix',
+        description: 'Our special mixed fruit salad loaded with flavors.',
+        price: 130,
+        categoryId: 'c1',
+        isVeg: true,
+      },
+      {
+        id: 'b3',
+        name: 'Fresh Cut Fruits',
+        description: 'Freshly cut seasonal fruits served without ice cream.',
+        price: 120,
+        categoryId: 'c2',
+        isVeg: true,
+      },
+      {
+        id: 'b4',
+        name: 'Chocolate Shake',
+        description: 'Thick and rich chocolate shake.',
+        price: 80,
+        categoryId: 'c3',
+        isVeg: true,
+        isBestseller: true,
+      },
+      {
+        id: 'b5',
+        name: 'Avocado Shake',
+        description: 'Creamy and healthy avocado shake.',
+        price: 80,
+        categoryId: 'c3',
+        isVeg: true,
+      },
+      {
+        id: 'b6',
+        name: 'Fresh Lime',
+        description: 'Refreshing fresh lime juice with ice.',
+        price: 20,
+        categoryId: 'c4',
         isVeg: true,
       }
     ]

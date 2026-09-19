@@ -17,6 +17,8 @@ export default function RestaurantTabs() {
           <Link
             key={rest.slug}
             href={`/menu/${rest.slug}`}
+            replace
+
             className="relative flex items-center justify-center min-w-[110px] px-4 py-3 rounded-t-2xl text-sm font-semibold whitespace-nowrap transition-colors flex-shrink-0"
             style={{
               color: isActive ? rest.theme.primary : 'var(--text-muted)',

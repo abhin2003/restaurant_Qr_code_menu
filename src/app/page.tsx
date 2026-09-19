@@ -4,8 +4,9 @@ import { ChevronRight } from 'lucide-react';
 
 const cardBackgrounds: Record<string, { url: string, position: string }> = {
   'banazo': { url: '/images/banazo_avil.png', position: 'center top' },
-  'grillax': { url: '/images/grillax_alpham.png', position: 'center center' },
-  'burger-inn': { url: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop', position: 'center center' }
+  'grillo': { url: '/images/grillo_alpham.png', position: 'center center' },
+  'burger-inn': { url: '/images/burger_inn_bg.jpg', position: 'center center' },
+  'bombay-cafe': { url: '/images/bombay_cafe_hero.jpg', position: 'center center' }
 };
 
 export default function Home() {
