@@ -28,7 +28,7 @@ export const restaurants: Restaurant[] = [
       { id: 'bc2', name: 'Our Special Chai' },
       { id: 'bc5', name: 'Chaat & Snacks' },
       { id: 'bc6', name: 'South Indian' },
-      { id: 'bc7', name: 'Meals/Thali' },
+      { id: 'bc7', name: 'Puffs & Hot Snacks' },
       { id: 'bc8', name: 'Fresh Bakery' },
       { id: 'bc9', name: 'Ice Cream/Desserts' },
     ],
@@ -97,25 +97,37 @@ export const restaurants: Restaurant[] = [
         price: 70, categoryId: 'bc6', isVeg: true,
       },
 
-      // Meals/Thali
+      // Puffs & Hot Snacks
       {
-        id: 'bc-m1', name: 'Veg Meals (Thali)', description: 'Complete traditional vegetarian meal with rice, dal, curries, and sweet.',
-        price: 180, categoryId: 'bc7', isVeg: true, image: '/images/bombay_cafe_thali.jpg',
+        id: 'bc-p1', name: 'Veg Puff', description: 'Flaky pastry filled with mixed vegetables.',
+        price: 30, categoryId: 'bc7', isVeg: true, image: '/images/bombay_cafe_puffs.jpg',
       },
       {
-        id: 'bc-m2', name: 'Chicken Thali', description: 'Traditional thali featuring our special chicken curry.',
-        price: 240, categoryId: 'bc7', isVeg: false,
+        id: 'bc-p2', name: 'Egg Puff', description: 'Flaky pastry filled with spiced egg masala.',
+        price: 35, categoryId: 'bc7', isVeg: false,
+      },
+      {
+        id: 'bc-p3', name: 'Chicken Puff', description: 'Flaky pastry filled with spiced minced chicken.',
+        price: 45, categoryId: 'bc7', isVeg: false,
+      },
+      {
+        id: 'bc-c1', name: 'Veg Cutlet', description: 'Crispy fried mixed vegetable patties.',
+        price: 25, categoryId: 'bc7', isVeg: true,
+      },
+      {
+        id: 'bc-c2', name: 'Beef Cutlet', description: 'Kerala style spicy beef cutlet.',
+        price: 35, categoryId: 'bc7', isVeg: false,
+      },
+      {
+        id: 'bc-c3', name: 'Chicken Cutlet', description: 'Crispy fried minced chicken patties.',
+        price: 35, categoryId: 'bc7', isVeg: false,
+      },
+      {
+        id: 'bc-s3', name: 'Punjabi Samosa', description: 'Classic large samosa with potato filling.',
+        price: 20, categoryId: 'bc7', isVeg: true,
       },
 
       // Fresh Bakery
-      {
-        id: 'bc-b1', name: 'Veg Puff', description: 'Flaky pastry filled with mixed vegetables.',
-        price: 30, categoryId: 'bc8', isVeg: true,
-      },
-      {
-        id: 'bc-b2', name: 'Chicken Puff', description: 'Flaky pastry filled with spiced minced chicken.',
-        price: 45, categoryId: 'bc8', isVeg: false,
-      },
       {
         id: 'bc-b3', name: 'Chocolate Cake (Slice)', description: 'Rich chocolate sponge cake.',
         price: 80, categoryId: 'bc8', isVeg: true,

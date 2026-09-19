@@ -31,9 +31,6 @@ export default function BombayCafeMenu({ restaurant }: { restaurant: Restaurant 
             <span className="text-[10px] text-gray-500 font-medium">Andheri, Mumbai - 400053</span>
           </div>
         </div>
-        <button className="text-gray-500 hover:bg-gray-50 p-2 rounded-full transition-colors">
-          <Search size={20} />
-        </button>
       </header>
 
       {/* Main Title Section */}
@@ -44,15 +41,6 @@ export default function BombayCafeMenu({ restaurant }: { restaurant: Restaurant 
         </div>
         <p className="text-[11px] text-gray-500 mb-4">Our famous shakes & juices</p>
 
-        {/* Search Bar */}
-        <div className="w-full relative mb-4">
-          <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-          <input 
-            type="text" 
-            placeholder="Search for shakes, juices, snacks..." 
-            className="w-full bg-gray-50/80 border border-gray-200 text-gray-800 text-xs rounded-xl pl-9 pr-4 py-2.5 focus:outline-none focus:border-red-300 focus:ring-1 focus:ring-red-300 placeholder-gray-400"
-          />
-        </div>
       </div>
 
       {/* Category Nav Pill Menu */}
@@ -203,10 +191,10 @@ export default function BombayCafeMenu({ restaurant }: { restaurant: Restaurant 
                   <h2 className="text-[15px] font-bold text-gray-900 tracking-tight">{section.cat!.name}</h2>
                 </div>
                 <div className="w-full h-44 rounded-2xl overflow-hidden mb-5 relative shadow-sm">
-                   <img src="/images/bombay_cafe_thali.jpg" alt="Meals" className="w-full h-full object-cover" />
+                   <img src={section.items[0]?.image || '/images/bombay_cafe_puffs.jpg'} alt={section.items[0]?.name || "Hero"} className="w-full h-full object-cover" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
-                     <h3 className="text-white font-bold text-xl">South Indian Thali</h3>
-                     <span className="text-white font-medium text-sm">₹180</span>
+                     <h3 className="text-white font-bold text-xl">{section.items[0]?.name}</h3>
+                     <span className="text-white font-medium text-sm">₹{section.items[0]?.price}</span>
                    </div>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
